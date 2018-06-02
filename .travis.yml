@@ -7,11 +7,9 @@ before_install:
   - pip install pipenv --upgrade
 
 install:
-  - pipenv install --dev
-  - pipenv shell
+  - pipenv install --dev --system --deploy
   - cd src
   - cp CardsAgainstHumanity/settings/local.sample.env CardsAgainstHumanity/settings/local.env
-  - python manage.py migrate
 
 script:
   - python manage.py test
