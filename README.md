@@ -1,10 +1,11 @@
 # Cards Against Humanity in Django
 
-[![Build Status](https://travis-ci.org/hamtaai/CardsAgainstHumanity.svg?branch=master)](https://travis-ci.org/hamtaai/CardsAgainstHumanity)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Coverage](coverage.svg)](https://github.com/hamtaai/CardsAgainstHumanity)
 [![Python Version](https://img.shields.io/badge/python-3.6-blue.svg)](https://github.com/hamtaai/CardsAgainstHumanity)
 [![Django Version](https://img.shields.io/badge/django-2.0-blue.svg)](https://github.com/hamtaai/CardsAgainstHumanity)
+
+[![Build Status](https://travis-ci.org/hamtaai/CardsAgainstHumanity.svg?branch=master)](https://travis-ci.org/hamtaai/CardsAgainstHumanity)
+[![Coverage](coverage.svg)](https://github.com/hamtaai/CardsAgainstHumanity)
 
 This is a toy project for practicing Django. It is not intended to ever reach a production-ready state.
 
