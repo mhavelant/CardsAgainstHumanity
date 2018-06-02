@@ -9,11 +9,13 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 from django.urls import reverse_lazy
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / "directory"
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-STATICFILES_DIRS = [str(BASE_DIR / 'static'), ]
-MEDIA_ROOT = str(BASE_DIR / 'media')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "/media/"
 
 # Use Django templates using the new Django 1.8 TEMPLATES settings
@@ -21,7 +23,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            str(BASE_DIR / 'templates'),
+            os.path.join(BASE_DIR, 'templates'),
             # insert more TEMPLATE_DIRS here
         ],
         'APP_DIRS': True,
@@ -39,6 +41,16 @@ TEMPLATES = [
             ],
         },
     },
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates', 'jinja2'),
+        ],
+        'APP_DIRS': False,
+        'OPTIONS': {
+            'environment': 'CardsAgainstHumanity.jinja2.environment',
+        },
+    },
 ]
 
 # Use 12factor inspired environment variables or from a file
@@ -47,7 +59,7 @@ env = environ.Env()
 
 # Create a local.env file in the settings directory
 # But ideally this env file should be outside the git repo
-env_file = Path(__file__).resolve().parent / 'local.env'
+env_file = Path(os.path.join(Path(__file__).resolve().parent, 'local.env'))
 if env_file.exists():
     environ.Env.read_env(str(env_file))
 

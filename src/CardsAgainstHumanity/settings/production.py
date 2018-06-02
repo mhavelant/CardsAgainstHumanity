@@ -2,6 +2,7 @@
 #    DJANGO_SETTINGS_MODULE=CardsAgainstHumanity.settings.production
 from .base import *             # NOQA
 import logging.config
+import os
 
 # For security and performance reasons, DEBUG is turned off
 DEBUG = False
@@ -46,10 +47,10 @@ TEMPLATES[0]['OPTIONS'].update({"loaders": loaders})
 TEMPLATES[0].update({"APP_DIRS": False})
 
 # Define STATIC_ROOT for the collectstatic command
-STATIC_ROOT = str(BASE_DIR.parent / 'site' / 'static')
+STATIC_ROOT = os.path.join(BASE_DIR.parent, 'site', 'static')
 
 # Log everything to the logs directory at the top
-LOGFILE_ROOT = BASE_DIR.parent / 'logs'
+LOGFILE_ROOT = os.path.join(BASE_DIR.parent, 'logs')
 
 # Reset logging
 LOGGING_CONFIG = None
@@ -69,7 +70,7 @@ LOGGING = {
         'proj_log_file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': str(LOGFILE_ROOT / 'project.log'),
+            'filename': os.path.join(LOGFILE_ROOT, 'project.log'),
             'formatter': 'verbose'
         },
         'console': {
