@@ -4,8 +4,18 @@ timid = True
 branch = True
 plugins = django_coverage_plugin
 source = CardsAgainstHumanity
-omit = CardsAgainstHumanity/tests/*
-parallel = True
+omit =
+    CardsAgainstHumanity/tests/*
+    CardsAgainstHumanity/jinja2.py
+    CardsAgainstHumanity/views.py
+    CardsAgainstHumanity/settings/*
+    CardsAgainstHumanity/logger.py
+    CardsAgainstHumanity/urls.py
+    CardsAgainstHumanity/wsgi.py
+    CardsAgainstHumanity/__init__.py
+    CardsAgainstHumanity/*/__init__.py
+    CardsAgainstHumanity/*/*/__init__.py
+;parallel = True
 
 [report]
 fail_under=100
