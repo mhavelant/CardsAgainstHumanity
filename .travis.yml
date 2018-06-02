@@ -5,6 +5,7 @@ python:
 
 before_install:
   - pip install pipenv --upgrade
+  - mkdir logs
 
 install:
   - pipenv install --dev --system --deploy
