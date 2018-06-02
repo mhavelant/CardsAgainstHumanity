@@ -1,3 +1,16 @@
 [run]
-plugins =
-    django_coverage_plugin
+data_file = ../coverage/.coverage
+timid = True
+branch = True
+plugins = django_coverage_plugin
+source = CardsAgainstHumanity
+omit = CardsAgainstHumanity/tests/*
+parallel = True
+
+[report]
+fail_under=100
+sort=Cover
+show_missing=True
+
+[html]
+directory=../coverage/coverage_html

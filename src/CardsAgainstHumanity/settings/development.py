@@ -23,7 +23,8 @@ AUTH_PASSWORD_VALIDATORS = []
 
 # Django Debug Toolbar
 INSTALLED_APPS += (
-    'debug_toolbar',)
+    'debug_toolbar',
+)
 
 # Additional middleware introduced by debug toolbar
 MIDDLEWARE += [
