@@ -4,7 +4,9 @@
 logs
 tmp
 data
+coverage
 
+src/.coverage
 
 # Edge template ignores
 # Byte-compiled / optimized / DLL files

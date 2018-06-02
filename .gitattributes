@@ -3,6 +3,10 @@
 /.travis.yml export-ignore
 /TEMPLATE-LICENCE.txt export-ignore
 /.gitattributes export-ignore
+/.coveragerc export-ignore
+/coverage-badge.svg export-ignore
+/requirements-update.sh export-ignore
+/coverage-run.sh export-ignore
 
 ##
 #
