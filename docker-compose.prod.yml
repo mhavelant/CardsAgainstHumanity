@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  app:
+    image: havelantmate/cah:${APP_IMAGE_TAG}
+    container_name: "${PROJECT_NAME}_app"
+    environment:
+      # App
+      PORT: "${APP_PORT}"
