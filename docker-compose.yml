@@ -10,4 +10,6 @@ services:
     volumes:
       - ./app:/app
     working_dir: /app/src
-    command: ["go", "run", "main.go"]
+#    command: ["go", "run", "main.go"]
+#    command: ["CompileDaemon", "--build=\"go build -ldflags=\"-w -s\" -o /tmp/build/cardsagainst .\"", "--command=/tmp/build/cardsagainst"]
+    command: ["fresh", "-c=/app/runner.conf"]

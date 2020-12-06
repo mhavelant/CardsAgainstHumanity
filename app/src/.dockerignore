@@ -1,3 +1,2 @@
 .dockerignore
-bin
-pkg
+src/tmp

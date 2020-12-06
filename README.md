@@ -2,6 +2,10 @@
 
 Toy project for learning golang by implementing a Cards Against Humanity clone webapp.
 
-## Info
+## Project Info
 
 The `$GOPATH` is the `app` folder.
+
+## Assets
+
+- Favicons by <https://favicon.io/>

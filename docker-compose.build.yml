@@ -3,8 +3,8 @@ version: "3.8"
 services:
   app:
     build:
-      context: ./app
-      dockerfile: ./../docker/app/Dockerfile
+      context: ./app/src
+      dockerfile: ./../../docker/app/Dockerfile
       args:
         BASE_IMAGE: library/golang
         BASE_IMAGE_TAG: 1.15.6-alpine3.12
